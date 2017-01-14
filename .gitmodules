@@ -1,0 +1,4 @@
+[submodule "chainer"]
+	path = chainer
+	url = https://github.com/yuyu2172/chainer.git
+	branch = cudnn-performance-dynamic
