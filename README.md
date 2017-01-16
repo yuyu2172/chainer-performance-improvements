@@ -18,5 +18,9 @@ python train_imagenet.py
 1. Run `cudnnFindConvolution*` to evaluate convolution algorithms at warmup, and use the fastest algorithm validated empirically.
 2. Stop doing unnecessary gradient computation at bottom conv layer (a trick used by Torch benchmark script)
 
+# TODOs
+
+1. sgd kernel calls are redundant. Combine them with gradient accumulation kernels.
+
 # Benchmarks
 You can check a benchmark results at `BENCHMARK.md`.
