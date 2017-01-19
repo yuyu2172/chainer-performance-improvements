@@ -5,6 +5,7 @@
 
 # chainer
 
+# alexnet
 no tuning
 ```
 alexnet                                 
@@ -21,7 +22,7 @@ Average Backward:  34.9425219774  ms
 Average Total:     53.1176707506  ms   
 ```
 
-optimize kernels + no data grad
+no data grad, optimize conv kernels
 ```
 Average Forward:   17.4910337448  ms   
 Average Backward:  30.8514846325  ms   
@@ -29,8 +30,7 @@ Average Total:     48.3425183773  ms
 
 ```
 
-no softmax 
-optimize kernels + no data grad
+optimize conv kernels, no data grad, no softmax
 
 ```
 Average Forward:   17.3968765259  ms 
@@ -38,9 +38,7 @@ Average Backward:  30.5509248734  ms
 Average Total:     47.9478013992  ms 
 ```
 
-no sgd update
-no softmax 
-optimize kernels + no data grad
+optimize conv kernels, no data grad, no softmax, no sgd update
 
 ```
 Average Forward:   17.5450880051  ms    
@@ -48,10 +46,7 @@ Average Backward:  28.8155040741  ms
 Average Total:     46.3605920792  ms    
 ```
 
-remove unnecessary x._grad+=gx
-no sgd update
-no softmax 
-optimize kernels + no data grad
+optimize conv kernels, no data grad, no softmax, no sgd update, remove unnecessary `x._grad+=gx`,
 
 ```
 Average Forward:   17.5475772858  ms  
@@ -59,38 +54,6 @@ Average Backward:  26.7493019104  ms
 Average Total:     44.2968791962  ms  
 ```
 
-### Googlenet
-no tuning
-```
-Average Forward:   92.5838790894  ms  
-Average Backward:  200.850806594  ms  
-Average Total:     293.434685683  ms  
-
-```
-
-no data grad
-```
-Average Forward:   92.3806648254  ms     
-Average Backward:  191.122313523  ms     
-Average Total:     283.502978349  ms     
-
-```
-
-
-optimize kernels + no data grad
-```
-Average Forward:   90.8184089661  ms  
-Average Backward:  181.053549671  ms  
-Average Total:     271.871958637  ms  
-
-```
-
-no optimizer
-```
-Average Forward:   90.1632949829  ms         
-Average Backward:  176.285327148  ms         
-Average Total:     266.448622131  ms         
-```
 
 # Torch
 
