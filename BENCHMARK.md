@@ -64,6 +64,12 @@ Average Total:     271.871958637  ms
 
 ```
 
+no optimizer
+```
+Average Forward:   90.1632949829  ms         
+Average Backward:  176.285327148  ms         
+Average Total:     266.448622131  ms         
+```
 
 # Torch
 
