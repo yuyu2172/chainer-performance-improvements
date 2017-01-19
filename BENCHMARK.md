@@ -29,14 +29,35 @@ Average Total:     48.3425183773  ms
 
 ```
 
-no optimizer
+no softmax 
+optimize kernels + no data grad
 
 ```
-Average Forward:   17.3952991486  ms 
-Average Backward:  28.7370016098  ms 
-Average Total:     46.1323007584  ms 
+Average Forward:   17.3968765259  ms 
+Average Backward:  30.5509248734  ms 
+Average Total:     47.9478013992  ms 
 ```
 
+no sgd update
+no softmax 
+optimize kernels + no data grad
+
+```
+Average Forward:   17.5450880051  ms    
+Average Backward:  28.8155040741  ms    
+Average Total:     46.3605920792  ms    
+```
+
+remove unnecessary x._grad+=gx
+no sgd update
+no softmax 
+optimize kernels + no data grad
+
+```
+Average Forward:   17.5475772858  ms  
+Average Backward:  26.7493019104  ms  
+Average Total:     44.2968791962  ms  
+```
 
 ### Googlenet
 no tuning

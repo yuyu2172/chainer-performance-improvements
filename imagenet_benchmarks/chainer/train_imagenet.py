@@ -84,6 +84,8 @@ def train_loop():
         # print "Forward step time elapsed:", time_, " ms"
 
         out.zerograd()
+        out.grad.fill(3)
+        model.cleargrads()
         xp.cuda.Stream(null=True)
         #time.sleep(0.5)
         start = xp.cuda.Event()
