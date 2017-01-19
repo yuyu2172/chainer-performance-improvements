@@ -16,9 +16,9 @@ python train_imagenet.py
 
 # Things I have done
 1. Run `cudnnFindConvolution*` to evaluate convolution algorithms at warmup, and use the fastest algorithm validated empirically.
-2. Stop doing unnecessary gradient computation at bottom conv layer (a trick used by Torch benchmark script)
+2. Stop doing unnecessary gradient computation at the bottom conv layer (a trick used by the Torch benchmark script)
 3. match computation burden to the Torch Benchmark (stop optimizer update, no softmax)
-4. fix code to stop calling `x._grad += gx` when `x._grad` is zero matrix. 
+4. fix code to stop calling `x._grad += gx` when `x._grad` is a zero matrix. 
 
 
 # Benchmarks
@@ -28,9 +28,9 @@ You can check a benchmark results at `Benchmarks.md`.
 Final results on Alex net
 ### Chainer
 ```
-Average Forward:   17.4400190353  ms   
-Average Backward:  28.0217214584  ms   
-Average Total:     45.4617404938  ms   
+Average Forward:   17.5481090546  ms
+Average Backward:  28.2826019287  ms
+Average Total:     45.8307109833  ms
 ```
 
 ### Torch

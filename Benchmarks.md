@@ -5,7 +5,18 @@
 
 # chainer
 
-# alexnet
+### alexnet
+
+workspace size (8MB)
+```
+alexnet
+Average Forward:   22.2445697784  ms
+Average Backward:  40.9176445007  ms
+Average Total:     63.1622142792  ms
+```
+
+Results below all set workspace size as 1GB.
+
 no tuning
 ```
 alexnet                                 
@@ -14,44 +25,29 @@ Average Backward:  41.731580019  ms
 Average Total:     59.967946079  ms     
 ```
 
-no data grad
+no data grad, no softmax, no sgd update
 ```
-alexnet                                
-Average Forward:   18.1751487732  ms   
-Average Backward:  34.9425219774  ms   
-Average Total:     53.1176707506  ms   
-```
-
-no data grad, optimize conv kernels
-```
-Average Forward:   17.4910337448  ms   
-Average Backward:  30.8514846325  ms   
-Average Total:     48.3425183773  ms   
-
+alexnet
+Average Forward:   18.2486175537  ms
+Average Backward:  34.547221756  ms
+Average Total:     52.7958393097  ms
 ```
 
-optimize conv kernels, no data grad, no softmax
-
+no data grad, no softmax, no sgd update, remove unnecessary `x._grad+=gx`
 ```
-Average Forward:   17.3968765259  ms 
-Average Backward:  30.5509248734  ms 
-Average Total:     47.9478013992  ms 
-```
-
-optimize conv kernels, no data grad, no softmax, no sgd update
-
-```
-Average Forward:   17.5450880051  ms    
-Average Backward:  28.8155040741  ms    
-Average Total:     46.3605920792  ms    
+alexnet
+Average Forward:   18.1039072037  ms
+Average Backward:  32.1488834381  ms
+Average Total:     50.2527906418  ms
 ```
 
-optimize conv kernels, no data grad, no softmax, no sgd update, remove unnecessary `x._grad+=gx`,
+
+no data grad, no softmax, no sgd update, remove unnecessary `x._grad+=gx`, optimize conv kernels
 
 ```
-Average Forward:   17.5475772858  ms  
-Average Backward:  26.7493019104  ms  
-Average Total:     44.2968791962  ms  
+Average Forward:   17.5481090546  ms
+Average Backward:  28.2826019287  ms
+Average Total:     45.8307109833  ms
 ```
 
 
