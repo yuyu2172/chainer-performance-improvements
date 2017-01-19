@@ -95,17 +95,17 @@ def train_loop():
             total_backward += time_
         # print "Backward step time elapsed:", time_, " ms"
 
-        #time.sleep(0.5)
-        start = xp.cuda.Event()
-        end = xp.cuda.Event()
-        start.record()
-        optimizer.update()
-        end.record()
-        end.synchronize()
-        time_ = xp.cuda.get_elapsed_time(start, end)
-        if i > n_dry - 1:
-            total_backward += time_
-        # print "Optimizer update time elapsed:", time_, " ms"
+        ##time.sleep(0.5)
+        #start = xp.cuda.Event()
+        #end = xp.cuda.Event()
+        #start.record()
+        #optimizer.update()
+        #end.record()
+        #end.synchronize()
+        #time_ = xp.cuda.get_elapsed_time(start, end)
+        #if i > n_dry - 1:
+        #    total_backward += time_
+        ## print "Optimizer update time elapsed:", time_, " ms"
 
         del loss, accuracy
     print "Average Forward:  ", total_forward  / count, " ms"

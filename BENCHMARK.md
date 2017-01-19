@@ -29,6 +29,14 @@ Average Total:     48.3425183773  ms
 
 ```
 
+no optimizer
+
+```
+Average Forward:   17.3952991486  ms 
+Average Backward:  28.7370016098  ms 
+Average Total:     46.1323007584  ms 
+```
+
 
 ### Googlenet
 no tuning
