@@ -28,9 +28,9 @@ You can check a benchmark results at `Benchmarks.md`.
 Final results on Alex net
 ### Chainer
 ```
-Average Forward:   17.5475772858  ms  
-Average Backward:  26.7493019104  ms  
-Average Total:     44.2968791962  ms  
+Average Forward:   17.4400190353  ms   
+Average Backward:  28.0217214584  ms   
+Average Total:     45.4617404938  ms   
 ```
 
 ### Torch
